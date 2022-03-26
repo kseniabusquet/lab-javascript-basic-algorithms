@@ -79,3 +79,49 @@ else if (hacker1 > hacker2){
 }
 
 else console.log("What?! You both have the same name?")
+
+//Bonus1 
+
+let paragraphs = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel sem aliquam, tincidunt nisl quis, ullamcorper urna. Fusce mi massa, condimentum eu dolor nec, pretium iaculis ipsum. Nullam ut orci lorem. Aliquam erat volutpat. Proin ornare orci non gravida ornare. Pellentesque bibendum mi magna, at tincidunt ligula sollicitudin in. 
+Ut nunc orci, egestas non congue vel, bibendum vitae ante. Nam eu risus dignissim, egestas dolor nec, interdum nisi. Ut fermentum lobortis faucibus. Curabitur a elit ante. 
+Praesent sit amet libero risus. Nulla efficitur ullamcorper lacus placerat rhoncus. Duis ullamcorper dapibus sapien ut consequat. Etiam suscipit sit amet lorem sed varius. 
+Vivamus sit amet commodo felis. Nam cursus quam et leo bibendum, sollicitudin vestibulum enim congue. Nullam tempor ligula quis nisi vulputate, sit amet fermentum purus sodales. 
+Integer nec placerat sem, non dapibus magna. Suspendisse suscipit tortor quis ex ullamcorper, sed sollicitudin justo ultrices. Vivamus tempus auctor turpis porttitor bibendum. 
+Aenean id dignissim nunc. Suspendisse vel elementum urna. Vestibulum elit est, consectetur et eleifend eu, posuere in nisl. Donec neque mi, venenatis id sapien in, egestas 
+euismod massa. Nam nec commodo sapien, rutrum interdum ligula. In porta tristique felis eu aliquet. Curabitur interdum risus magna, eget pharetra neque posuere nec. Cras 
+imperdiet augue eu eros blandit, et facilisis neque porta. Donec et velit nunc. Etiam ac sem mauris. Maecenas lobortis justo ante, id tempor quam porta vel. Sed laoreet libero 
+accumsan, tempor massa eget, molestie tellus. Vestibulum tristique imperdiet lacinia. Quisque vel sem vitae turpis sollicitudin porttitor. Duis eget metus aliquam, aliquet leo quis, 
+tincidunt magna.`
+
+const result = paragraphs.split(' ')
+console.log(`Total words in paragraphs: ${result.length}`)
+
+let counter = 0
+for (element of result){
+    if(element === 'et'){
+        counter++
+    }
+}
+console.log(`The number of times 'et' appears is: ${counter}`)
+
+//Bonus2
+
+let phraseToCheck = 'A man, a plan, a canal, Panama!'
+let lowerCase = phraseToCheck.toLowerCase()
+let formattedPhraseToCheck = lowerCase.split(/[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~ ]/).join('')
+
+console.log(formattedPhraseToCheck)
+
+let isPalindrome = true;
+
+for (let i = 0, j = formattedPhraseToCheck.length-1; i < formattedPhraseToCheck.length; i++, j-- ){  
+    if (formattedPhraseToCheck[i] === formattedPhraseToCheck[j]){
+        continue;
+    } 
+    else {
+        isPalindrome = false 
+            break;
+    }
+}
+
+console.log(`Is the phrase: ${phraseToCheck} a palindrome? ${isPalindrome}`)
